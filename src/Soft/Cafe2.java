@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cafe2 {
 	Menu[] menu = new Menu[5];
-	int total = 0;
+	private int total = 0;
 	String[] menu_arr = new String[10];
 	int[] menu_arri = new int[10];
 	public Cafe2() {
@@ -22,7 +22,7 @@ public class Cafe2 {
 			System.out.printf("%d. %s  %d\n",i+1,menu[i].getName(),menu[i].getPrice());
 		}
 	}
-	public void select_menu() {
+	public int select_menu() {
 			Scanner scan = new Scanner(System.in);
 			String select = null;
 			while(true) {
@@ -47,5 +47,34 @@ public class Cafe2 {
 				System.out.printf("%s :%d\n",menu[i].getName(),menu_arri[i]);
 			}
 			System.out.println("총 가격 :"+total);
+			return total;
+	}
+	public int get_total() {
+		return total;
+	}
+	public boolean refuse(Cafe1 cafe2,Payment pay) {
+		System.out.println("======소프트웨어 설계 Cafe======");
+		System.out.println("주문을 거절하시겠습니까? (Y/N) :");
+		String refuse = null;
+		Scanner scan = new Scanner(System.in);
+		try {
+			refuse = scan.nextLine();
+		}
+		catch(Exception e) {
+			System.out.println("입력이 잘못 되었습니다.");
+		}
+		if((refuse.equals("y")||refuse.equals("Y"))==true) {
+			System.out.println("주문을 거절 하셨습니다.");
+			System.out.println("============================");
+			System.out.println("카페의 사정으로 인해 주문이 거절되었습니다.");
+			System.out.println("금액이 반환 됩니다.");
+			System.out.println(cafe2.get_total());
+			return false;
+		}
+		else {
+			System.out.println("주문을 접수 하셨습니다.");
+			System.out.println("============================");
+			return true;
+		}	
 	}
 }

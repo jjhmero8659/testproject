@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class SelectCafe {
 	public int Select_Cafe() {
-		System.out.println("test");
 		System.out.println("원하시는 카페를 선택해 주세요");
 		System.out.println("1.소프트웨어 Cafe 2.설계 Cafe");
 		Scanner scan = new Scanner(System.in);

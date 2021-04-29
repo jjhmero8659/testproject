@@ -25,7 +25,6 @@ public class Login {
 				
 			}
 			else {
-				System.out.println("test3");
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			}	
 		}

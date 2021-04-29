@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Cafe1 {
 	Menu[] menu = new Menu[5];
 	private int total = 0;
-	String[] menu_arr = new String[10];
+	//String[] menu_arr = new String[10];
 	int[] menu_arri = new int[10];
 	public Cafe1() {
 		menu[0] = new Menu("아메리카노",1000);

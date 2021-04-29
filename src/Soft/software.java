@@ -3,6 +3,7 @@ package Soft;
 public class software {
 	public static void main(String[] args) {
 		Login login = new Login();
+		
 		CheckTime check = new CheckTime();
 		Payment payment = new Payment();
 		Addmenu add = new Addmenu();
@@ -27,10 +28,12 @@ public class software {
 						if(pay_1.check_cusmoney1(cafe_1)==true) {
 							pay_1.pay_cafe1(cafe_1);
 							System.out.println("이용해주셔서 감사합니다.");
+							SendMessage message = new SendMessage(cafe1, check);
 							return;
 						}
 						else {
 							System.out.println("이용해주셔서 감사합니다.");
+							SendMessage message = new SendMessage(cafe1, check);
 							return;
 						}
 						}
@@ -66,6 +69,7 @@ public class software {
 						if(pay_2.check_cusmoney2(cafe_2)==true) {
 							pay_2.pay_cafe2(cafe_2);
 							System.out.println("이용해주셔서 감사합니다.");
+							
 							return;
 						}
 						else {

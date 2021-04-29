@@ -23,6 +23,7 @@ public class CheckTime {
 		}
 		else{
 			System.out.println("시간 입력이 완료 되었습니다.");
+			System.out.println("==========================");
 			return true;
 		}
 	}

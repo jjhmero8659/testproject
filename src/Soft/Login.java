@@ -94,6 +94,7 @@ public class Login {
 			String Cus_PW = sc.next();
 			if(Cus_ID.equals(ID) && Cus_PW.equals(PW)) {
 				System.out.println("로그인에 성공하였습니다.");
+				System.out.println("==========================");
 				return;
 			}
 			else {

@@ -18,6 +18,7 @@ public class Cafe1 {
 	public void menu_show() {
 		System.out.println("=====소프트웨어 Cafe입니다====");
 		System.out.println("메뉴를 골라주세요");
+		System.out.println("==========================");
 		for(int i =0; i<5; i++) {
 			System.out.printf("%d. %s  %d\n",i+1,menu[i].getName(),menu[i].getPrice());
 		}
@@ -36,6 +37,7 @@ public class Cafe1 {
 					}
 					else if((select.equals("q")||select.equals("Q"))==true) {
 						System.out.println("주문을 중단하겠습니다.");	
+						System.out.println("==========================");
 						break;
 					}
 					}
@@ -47,6 +49,7 @@ public class Cafe1 {
 				System.out.printf("%s :%d\n",menu[i].getName(),menu_arri[i]);
 			}
 			System.out.println("총 가격 :"+total);
+			System.out.println("==========================");
 			return total;
 	}
 	public int get_total() {
@@ -54,7 +57,7 @@ public class Cafe1 {
 	}
 	public boolean refuse(Cafe1 cafe1,Payment pay) {
 		System.out.println("======소프트웨어 설계 Cafe======");
-		System.out.println("주문을 거절하시겠습니까? (Y/N) :");
+		System.out.print("주문을 거절하시겠습니까? (Y/N) :");
 		String refuse = null;
 		Scanner scan = new Scanner(System.in);
 		try {
@@ -69,6 +72,7 @@ public class Cafe1 {
 			System.out.println("카페의 사정으로 인해 주문이 거절되었습니다.");
 			System.out.println("금액이 반환 됩니다.");
 			System.out.println(cafe1.get_total());
+			System.out.println("==========================");
 			return false;
 		}
 		else {

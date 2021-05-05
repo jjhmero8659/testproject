@@ -3,15 +3,21 @@ package Soft;
 import java.util.Scanner;
 
 public class Login {
+	String select;
 	int select_first = 0;
 	Scanner sc = new Scanner(System.in);
 	public Login() {
 		String[] CusInfo = new String[3];
-		System.out.println("메뉴를 선택 해주세요");
-		System.out.println("1. 회원 가입 2.나가기");
 		while(true) {
+			System.out.println("메뉴를 선택 해주세요");
+			System.out.println("1. 회원 가입 2.나가기");
 			System.out.print("입력 : ");
-			select_first = sc.nextInt();
+			try {
+				select = sc.nextLine();
+				select_first = Integer.parseInt(select);
+			}
+			catch(Exception e) {
+			}
 			if(select_first == 1) {//회원가입
 				CusInfo[0] = joinmembership_Name();
 				CusInfo[1] = joinmembership_ID();

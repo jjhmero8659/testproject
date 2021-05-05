@@ -82,7 +82,7 @@ public class Cafe1 {
 		}	
 	}
 	public void sendmessage(CheckTime time) {
-		if(time.minute > 5) {
+		if(time.get_minute() >= 5) {
 				System.out.println("==========================");
 				System.out.println("======처음 주문한 메뉴======");
 			for(int i = 0; i< 10; i++) {
@@ -97,7 +97,7 @@ public class Cafe1 {
 			}
 	}
 	public void send_addmessage(CheckTime time) {
-		if(time.minute > 5) {
+		if(time.get_minute() >= 5) {
 				System.out.println("==========================");
 				System.out.println("======추가 주문한 메뉴======");
 			for(int i = 0; i< 10; i++) {

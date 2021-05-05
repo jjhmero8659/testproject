@@ -71,8 +71,8 @@ public class Reservationseats {
 				System.out.println("==========================");
 				return cus_sit;
 			}
-			else{
-				System.out.println("입력이 잘못 되었습니다.");
+			else {
+				System.out.println("비어있는 좌석의 번호가 아닙니다.");
 			}
 		}
 	}

@@ -16,8 +16,10 @@ public class software {
 			cafe1.menu_show();//메뉴판
 			if(cafe1.select_menu()!=0) {
 				if(check.check_time()==false) {//걸리는 시간 측정
+					System.out.println("체크타임 오바");
 					return;
 				}
+				else {
 				reserve.reserve();//좌석 예약
 				if(payment.check_cusmoney1(cafe1)==true) {//고객 현금 계산
 					payment.pay_cafe1(cafe1); // 카페1에서 현금 계산
@@ -33,12 +35,14 @@ public class software {
 							return;
 						}
 						else {
+							cafe1.sendmessage(check);
 							System.out.println("이용해주셔서 감사합니다.");
 							return;
 						}
 						
 						}
 						else {//추가주문 받지않기 선택
+							System.out.println("이용해주셔서 감사합니다.");
 							cafe1.sendmessage(check);
 						}
 					}
@@ -49,6 +53,7 @@ public class software {
 				else {//1번쨰에서 고객 현금 불통과
 					return;
 				}	
+			}
 			}
 			else {
 				System.out.println("주문한 메뉴가 없습니다. 프로그램을 종료합니다.");

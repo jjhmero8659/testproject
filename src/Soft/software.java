@@ -16,7 +16,6 @@ public class software {
 			cafe1.menu_show();//메뉴판
 			if(cafe1.select_menu()!=0) {
 				if(check.check_time()==false) {//걸리는 시간 측정
-					System.out.println("체크타임 오바");
 					return;
 				}
 				else {
@@ -29,10 +28,16 @@ public class software {
 						if(add.addmenu(cafe_1, reserve)==true) {//추가 주문 받기
 						if(pay_1.check_cusmoney1(cafe_1)==true) {//추가주문한 메뉴금액 소지금액 통과
 							pay_1.pay_cafe1(cafe_1); //추가 금액 계산
+							if(cafe_1.refuse(cafe1, payment)==true) {
 							System.out.println("이용해주셔서 감사합니다.");
 							cafe1.sendmessage(check); //메뉴 완료 메시지
 							cafe_1.send_addmessage(check);
 							return;
+							}
+							else {
+								cafe1.sendmessage(check);
+								return;
+							}
 						}
 						else {
 							cafe1.sendmessage(check);

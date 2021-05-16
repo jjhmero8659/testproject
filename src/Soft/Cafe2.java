@@ -81,4 +81,34 @@ public class Cafe2 {
 			return true;
 		}	
 	}
+	public void sendmessage(CheckTime time) {
+		if(time.get_minute() >= 5) {
+				System.out.println("==========================");
+				System.out.println("======처음 주문한 메뉴======");
+			for(int i = 0; i< 10; i++) {
+				if(menu_arri[i]!=0) {
+					System.out.println(menu[i].getName()+" : "+menu_arri[i]+"개");
+				}
+				
+			}
+			System.out.println("==========================");
+			System.out.println("메뉴가 도착 전에 제조가 완료됩니다.");
+			System.out.println("==========================");
+			}
+	}
+	public void send_addmessage(CheckTime time) {
+		if(time.get_minute() >= 5) {
+				System.out.println("==========================");
+				System.out.println("======추가 주문한 메뉴======");
+			for(int i = 0; i< 10; i++) {
+				if(menu_arri[i]!=0) {
+					System.out.println(menu[i].getName()+" : "+menu_arri[i]+"개");
+				}
+				
+			}
+			System.out.println("==========================");
+			System.out.println("메뉴가 도착 전에 제조가 완료됩니다.");
+			System.out.println("==========================");
+			}
+	}
 }

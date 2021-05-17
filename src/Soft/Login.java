@@ -3,8 +3,8 @@ package Soft;
 import java.util.Scanner;
 
 public class Login {
-	String select;
-	int select_first = 0;
+	private String select;
+	private int select_first = 0;
 	Scanner sc = new Scanner(System.in);
 	public Login() {
 		String[] CusInfo = new String[3];

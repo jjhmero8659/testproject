@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Cafe1 {
 	Menu[] menu = new Menu[5];
 	private int total = 0;
-	//String[] menu_arr = new String[10];
 	int[] menu_arri = new int[10];
 	public Cafe1() {
 		menu[0] = new Menu("아메리카노",1000);
@@ -55,7 +54,7 @@ public class Cafe1 {
 	public int get_total() {
 		return total;
 	}
-	public boolean refuse(Cafe1 cafe1,Payment pay) {
+	public boolean refuse(Payment pay) {
 		System.out.println("======소프트웨어 설계 Cafe======");
 		System.out.print("주문을 거절하시겠습니까? (Y/N) :");
 		String refuse = null;
@@ -71,7 +70,7 @@ public class Cafe1 {
 			System.out.println("============================");
 			System.out.println("카페의 사정으로 인해 주문이 거절되었습니다.");
 			System.out.println("금액이 반환 됩니다.");
-			System.out.println(cafe1.get_total());
+			System.out.println(total);
 			System.out.println("==========================");
 			return false;
 		}

@@ -22,13 +22,13 @@ public class software {
 				reserve.reserve();//좌석 예약
 				if(payment.check_cusmoney1(cafe1)==true) {//고객 현금 계산
 					payment.pay_cafe1(cafe1); // 카페1에서 현금 계산
-					if(cafe1.refuse(cafe1, payment)==true) { //카페1에서 주문 접수
+					if(cafe1.refuse(payment)==true) { //카페1에서 주문 접수
 						Cafe1 cafe_1 = new Cafe1();
 						Payment pay_1 = new Payment();
 						if(add.addmenu(cafe_1, reserve)==true) {//추가 주문 받기
 						if(pay_1.check_cusmoney1(cafe_1)==true) {//추가주문한 메뉴금액 소지금액 통과
 							pay_1.pay_cafe1(cafe_1); //추가 금액 계산
-							if(cafe_1.refuse(cafe1, payment)==true) {
+							if(cafe_1.refuse(payment)==true) {
 							System.out.println("이용해주셔서 감사합니다.");
 							cafe1.sendmessage(check); //메뉴 완료 메시지
 							cafe_1.send_addmessage(check);
@@ -76,13 +76,13 @@ public class software {
 				reserve.reserve();//좌석 예약
 				if(payment.check_cusmoney2(cafe2)==true) {//고객 현금 계산
 					payment.pay_cafe2(cafe2); // 카페1에서 현금 계산
-					if(cafe2.refuse(cafe2, payment)==true) { //카페2에서 주문 접수
+					if(cafe2.refuse(payment)==true) { //카페2에서 주문 접수
 						Cafe2 cafe_2 = new Cafe2();
 						Payment pay_2 = new Payment();
 						if(add.addmenu2(cafe_2, reserve)==true) {//추가 주문 받기
 						if(pay_2.check_cusmoney2(cafe_2)==true) {//추가주문한 메뉴금액 소지금액 통과
 							pay_2.pay_cafe2(cafe_2); //추가 금액 계산
-							if(cafe_2.refuse(cafe2, payment)==true) {
+							if(cafe_2.refuse(payment)==true) {
 							System.out.println("이용해주셔서 감사합니다.");
 							cafe2.sendmessage(check); //메뉴 완료 메시지
 							cafe_2.send_addmessage(check);

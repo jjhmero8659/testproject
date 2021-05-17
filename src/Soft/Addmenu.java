@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Addmenu {
 	Scanner scan = new Scanner(System.in);
-	String select = null;
+	private String select = null;
 	public boolean addmenu(Cafe1 cafe1,Reservationseats reserve) {//cafe1 기준
 		while(true) {
 			System.out.print("추가 주문 하시겠습니까?(Y/N) :");

@@ -6,12 +6,12 @@ public class Reservationseats {
 	private int max = 10;
 	private int min = 1;
 	private boolean check_sit;
-	int cus_sit=0;
-	String scus_sit=null;
-	int[] sits = new int[10];
-	int[] sits_empty = new int[3];
+	private int cus_sit=0;
+	private String scus_sit=null;
+	private int[] sits = new int[10];
+	private int[] sits_empty = new int[3];
 	Scanner scan = new Scanner(System.in);
-	String select = null;
+	private String select = null;
 	
 	public Reservationseats() {
 		for(int i=0; i<10; i++) {

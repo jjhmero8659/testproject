@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class CheckTime {
 	private String minute = "0";
 	private int i_minute;
-	private boolean result;
+	
 	public int get_minute() {
 		return i_minute;
 	}
 	public boolean check_time() {
-		
+		boolean result;
 		Scanner scan = new  Scanner(System.in);
 		while(minute == "0")
 		{
